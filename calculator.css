@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #050a0f; /* Extra dark navy black */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    /* Naya Deep Gradient Effect */
+    background: radial-gradient(circle at 50% 50%, #102a43 0%, #050a0f 100%);
+}
+
+/* Background mein ghumti hui roshniyan (Animated Shapes) */
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: move 20s infinite alternate;
+}
+
+.circle:nth-child(1) {
+    top: -50px;
+    left: -50px;
+    background: #00d2ff;
+}
+
+.circle:nth-child(2) {
+    bottom: -50px;
+    right: -50px;
+    background: #ff5e62; /* Pinkish-Red hint */
+    animation-delay: -10s;
+}
+
+@keyframes move {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(100px, 100px) scale(1.2); }
+}
+
+/* Calculator Card ko thora aur uthane ke liye */
+.calculator {
+    position: relative;
+    width: 340px;
+    padding: 25px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.03); /* Thora aur transparent */
+    backdrop-filter: blur(25px); /* Zyada blur for premium feel */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+/* Glassmorphism Card */
+.calculator {
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.brand {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#display {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Operator Colors */
+.btn-op { color: #00d2ff; font-weight: 600; }
+.btn-alt { color: #ff5e62; }
+.btn-eq { 
+    background: #00d2ff; 
+    color: #fff; 
+    box-shadow: 0 0 20px #00d2ff;
+}
+.btn-eq:hover {
+    background: #00b4db;
+    box-shadow: 0 0 30px #00d2ff;
+}
+
+/* Decorative background circles */
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#00d2ff, #3a7bd5);
+    filter: blur(50px);
+}
+.circle:nth-child(1) { top: 10%; left: 20%; }
+.circle:nth-child(2) { bottom: 10%; right: 20%; background: #ff5e62; }
